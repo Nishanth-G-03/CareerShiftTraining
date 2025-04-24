@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Calculator</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <H1>VELOCITY CALCULATOR</H1>
+    <div class="container">
+        
+        <div class="inputData">
+            <div class="inputcell">
+                <label for="flowfsv">Flow Meter Full Scale Value (Q) :</label>
+                <input type="number" id="flowFullScaleValue" placeholder="Enter Value">
+                <span>LPH</span>
+            </div>
+            <div class="inputcell">
+                <label for="outerDia">Outer Diameter of Pipe (D) :</label>
+                <input type="number" id="outerDiameter" placeholder="Enter Value">
+                <span>mm</span>
+            </div>
+            <div class="inputcell">
+                <label for="thickness">Thickness of Pipe (T) :</label>
+                <input type="number" id="pipeThickness" placeholder="Enter Value">
+                <span>mm</span>
+            </div>
+            <div class="inputcell">
+                <label for="velToMaint">Velocity to be Maintained in the Loop (V<sub>req</sub>) :</label>
+                <input type="number" id="velToMaintain" placeholder="Enter Value">
+                <span>m/sec</span>
+            </div>
+            <div class="buttonf">
+                <input type="button" id="button" value="Calculate">
+            </div>
+        </div>
+        <div class="OutputData">
+            <table>
+                <tr>
+                  <th>Parameters</th>
+                  <th>Value</th>
+                  <th>Unit</th>
+                </tr>
+                <tr>
+                    <td>Inner Diameter of Pipe</td>
+                    <td id="innerDia">-</td>
+                    <td>m</td>
+                  </tr>
+                <tr>
+                  <td>Inside area of the Pipe</td>
+                  <td id="areaOfPipe">-</td>
+                  <td>m<sup>2</sup></td>
+                </tr>
+                <tr>
+                  <td>Velocity through the Pipe (when Q equals FSV)</td>
+                  <td id="velocity">-</td>
+                  <td>m/sec</td>
+                </tr>
+                <tr>
+                    <td>Flow to be maintained in Loop to achieve V<sub>req</sub></td>
+                    <td id="flowToMaintain">-</td>
+                    <td>LPH</td>
+                  </tr>
+              </table>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+<p>Created by Nishanth.G (PDIA)</p>
+</body>
+</html>
